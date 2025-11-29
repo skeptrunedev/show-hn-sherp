@@ -1,0 +1,104 @@
+/* Paper Theme - Sepia/cream tones, serif typography, academic feel */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;600&display=swap');
+
+html, body {
+  background: #f4f1ea;
+  color: #2c2416;
+  font-family: 'Crimson Pro', 'Georgia', 'Times New Roman', serif;
+}
+
+.slide {
+  background: #f4f1ea;
+}
+
+.slide h1 {
+  color: #1a1408;
+  font-weight: 700;
+  font-style: italic;
+  border-bottom: 2px solid #8b7355;
+  padding-bottom: 0.3em;
+}
+
+.slide h2 {
+  color: #3d2e1a;
+  font-weight: 600;
+}
+
+.slide h3 {
+  color: #5c4a32;
+  font-weight: 600;
+}
+
+.slide strong {
+  color: #1a1408;
+  font-weight: 700;
+}
+
+.slide em {
+  color: #5c4a32;
+  font-style: italic;
+}
+
+.slide a {
+  color: #6b4423;
+  text-decoration: underline;
+}
+
+.slide ul, .slide ol {
+  color: #2c2416;
+}
+
+.slide li::marker {
+  color: #8b7355;
+}
+
+.slide blockquote {
+  border-left-color: #8b7355;
+  background: rgba(139, 115, 85, 0.1);
+  color: #5c4a32;
+  font-style: italic;
+  padding: 1em 1.5em;
+}
+
+.slide blockquote p {
+  margin: 0;
+}
+
+.slide code {
+  background: rgba(139, 115, 85, 0.15);
+  color: #3d2e1a;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85em;
+}
+
+.slide pre {
+  background: #ebe6dc;
+  border: 1px solid #d4cbb8;
+  border-radius: 0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.slide pre code {
+  color: #2c2416;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.slide table {
+  border-color: #8b7355;
+}
+
+.slide th {
+  background: rgba(139, 115, 85, 0.2);
+  color: #1a1408;
+  font-weight: 600;
+}
+
+.slide th, .slide td {
+  border-color: #c4b8a4;
+}
+
+.slide-page-number {
+  color: #8b7355;
+  font-style: italic;
+}

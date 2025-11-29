@@ -1,0 +1,6 @@
+{
+  "title": "My Presentation",
+  "author": "Your Name",
+  "presentationFile": "./presentation.mdx",
+  "customStyles": "./styles/custom.css"
+}
