@@ -1,0 +1,9 @@
+name = "sherp-skeptrune"
+compatibility_date = "2024-01-01"
+
+routes = [
+  { pattern = "sherp.skeptrune.com", custom_domain = true }
+]
+
+[assets]
+directory = "./dist"
