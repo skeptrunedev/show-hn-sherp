@@ -1,6 +1,6 @@
-/* Paper Theme - Sepia/cream tones, serif typography, academic feel */
+/* Paper Theme - Enhanced with better visual hierarchy and polish */
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Code+Pro:wght@400;500&family=Inter:wght@400;500;600&display=swap');
 
 html, body {
   background: #f4f1ea;
@@ -12,17 +12,84 @@ html, body {
   background: #f4f1ea;
 }
 
+/* Title slide styling */
+.title-slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 2em;
+}
+
+.title-slide-content h1 {
+  font-size: 3.5em;
+  border-bottom: none !important;
+  margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #3d2e1a 0%, #6b4423 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-slide-content p {
+  font-size: 1.4em;
+  color: #5c4a32;
+  margin: 0.5em 0;
+}
+
+.title-slide-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title-slide-content li {
+  margin: 0;
+}
+
+.title-slide-content li::marker {
+  content: none;
+}
+
+.title-slide-content a {
+  color: #6b4423;
+  text-decoration: none;
+  padding: 0.6em 1.2em;
+  border: 2px solid #8b7355;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8em;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.title-slide-content a:hover {
+  background: #8b7355;
+  color: #f4f1ea;
+}
+
+/* Standard headings */
 .slide h1 {
   color: #1a1408;
   font-weight: 700;
   font-style: italic;
-  border-bottom: 2px solid #8b7355;
+  border-bottom: 3px solid #8b7355;
   padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
 }
 
 .slide h2 {
   color: #3d2e1a;
   font-weight: 600;
+  font-size: 2.2em;
+  margin-bottom: 0.6em;
 }
 
 .slide h3 {
@@ -43,10 +110,23 @@ html, body {
 .slide a {
   color: #6b4423;
   text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.slide p {
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #3d2e1a;
 }
 
 .slide ul, .slide ol {
   color: #2c2416;
+  font-size: 1.1em;
+}
+
+.slide li {
+  margin: 0.5em 0;
+  line-height: 1.6;
 }
 
 .slide li::marker {
@@ -59,33 +139,103 @@ html, body {
   color: #5c4a32;
   font-style: italic;
   padding: 1em 1.5em;
+  border-radius: 0 8px 8px 0;
 }
 
 .slide blockquote p {
   margin: 0;
 }
 
+/* Code styling */
 .slide code {
   background: rgba(139, 115, 85, 0.15);
   color: #3d2e1a;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: 0.85em;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
 }
 
 .slide pre {
-  background: #ebe6dc;
-  border: 1px solid #d4cbb8;
-  border-radius: 0;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  background: #2c2416 !important;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(44, 36, 22, 0.3);
+  padding: 1.5em;
+  margin: 1em 0;
 }
 
 .slide pre code {
-  color: #2c2416;
-  font-family: 'Source Sans 3', sans-serif;
+  color: #f0e6d6 !important;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.95em;
+  background: transparent !important;
+  padding: 0;
+  text-shadow: none;
 }
 
+/* Image styling */
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(44, 36, 22, 0.15);
+}
+
+/* Image slides - constrain image size */
+.image-slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.image-slide-content img {
+  max-height: 55vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0.5em 0;
+}
+
+.image-slide-content p {
+  margin: 0.3em 0;
+}
+
+/* CTA/final slide */
+.cta-slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.cta-slide-content h1 {
+  font-size: 3em;
+  text-align: center;
+  border-bottom: none !important;
+  margin-bottom: 0.5em;
+}
+
+.cta-slide-content pre {
+  max-width: 650px;
+  margin: 1em auto;
+  text-align: left;
+}
+
+.cta-slide-content p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  color: #5c4a32;
+}
+
+/* Table styling */
 .slide table {
   border-color: #8b7355;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .slide th {
@@ -98,7 +248,28 @@ html, body {
   border-color: #c4b8a4;
 }
 
+/* Page number */
 .slide-page-number {
   color: #8b7355;
-  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Subtle decorative element - top accent bar */
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b7355, #c4a574, #8b7355);
+  opacity: 0.6;
+}
+
+/* Hide accent bar on title and CTA slides */
+.slide:has(.title-slide-content)::before,
+.slide:has(.cta-slide-content)::before {
+  display: none;
 }
